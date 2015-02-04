@@ -94,6 +94,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/home/anmakarov/Desktop/Projects/dashboard/templates/nagios_alerts/bootstrap/',
+)
+
+
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
+    "/home/anmakarov/Desktop/Projects/dashboard/templates/nagios_alerts",
 )
