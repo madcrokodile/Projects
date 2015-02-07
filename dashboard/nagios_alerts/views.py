@@ -6,10 +6,25 @@ from django.shortcuts import  render
 
 
 def index(request):
-    server_list = [1, 2, 3]
-    dash_template = loader.get_template('nagios_alerts/index2.html')
+    server_name = ['fe110', 'nagios.corp.hsotcomm.ru']
+
+    # это пока критикал, красный
+    #    server_status = 'F51414'
+    # а это клёвый желтый ворнинг
+    server_status = 'F5EC14'
+
+ #  service_name = ['http', 'ftp', 'ssh', 'nginx']
+    service_name = 'https'
+    service_duration = '12.13'
+    service_status_message = 'всё пропало, Левон, всё пропалооо!!!'
+    dash_template = loader.get_template('nagios_alerts/index.html')
     context = RequestContext(request,
-        {'server_list' : server_list}
+        {'server_name' : server_name,
+         'server_status' : server_status,
+         'service_name' : service_name,
+         'service_duration' : service_duration,
+       'service_status_message' : service_status_message
+        }
     )
     html = dash_template.render(context)
     return HttpResponse(html)

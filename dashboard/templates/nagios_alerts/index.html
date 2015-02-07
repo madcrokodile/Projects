@@ -25,7 +25,9 @@
       </div>
     </nav>
 
-{% for servers in context %}
+
+
+
 
 
     <h2 class="sub-header">New alerts</h2>
@@ -41,23 +43,32 @@
                 </tr>
               </thead>
 
-
+{% for i in server_name %}
               <tbody>
-                <tr style="background-color:#F51414">
-                  <td>{{ servers }}</td>
-                  <td>http</td>
-                  <td>11.11</td>
+
+                <tr style="background-color:#{{ server_status }}">
+
+                      <td> {{ i }} </td>
+
+                  <td>{{ service_name }}</td>
+                  <td>{{ service_duration }}</td>
                   <td><div class="btn-group" role="group" aria-label="Power Buttons!!!">
                     <button type="button" class="btn btn-default">Info</button>
                     <button type="button" class="btn btn-default">Ack</button>
                     <button type="button" class="btn btn-default">Mail</button>
                     <button type="button" class="btn btn-default">Call</button>
 </div></td>
-                  <td>всё пропало всё пропало всё пропало всё пропало</td>
+                  <td>{{ service_status_message }}</td>
                 </tr>
+{% endfor %}
 
 
-              <tr style="background-color:#F51414">
+
+
+
+
+
+              <!--tr style="background-color:#F51414">
                   <td></td>
                   <td>http</td>
                   <td>11.11</td>
@@ -91,7 +102,7 @@
                     <button type="button" class="btn btn-default">Call</button>
 </div></td>
                   <td>если тут что-то не влезет по ширине, то форматирование кнопок идет по пизде</td>
-                </tr>
+                </tr--!>
 
 
               </tbody>
@@ -103,6 +114,3 @@
   </body>
 </html>
 
-
-
-{% endfor %}
