@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     #url(r'^dashboard/', include('nagios_alerts.urls')),
     url(r'^dash/', include('nagios_alerts.urls')),
     url(r'^admin/', include(admin.site.urls)),
+#    url(r'^testing/', include('nagios_alerts.urls')),
 )

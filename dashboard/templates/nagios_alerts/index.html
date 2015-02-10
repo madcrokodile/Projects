@@ -43,23 +43,25 @@
                 </tr>
               </thead>
 
-{% for i in server_name %}
+{% for server in server_name %}
+
               <tbody>
 
-                <tr style="background-color:#{{ server_status }}">
+                    {% for service in service_name %}
 
-                      <td> {{ i }} </td>
-
-                  <td>{{ service_name }}</td>
-                  <td>{{ service_duration }}</td>
-                  <td><div class="btn-group" role="group" aria-label="Power Buttons!!!">
-                    <button type="button" class="btn btn-default">Info</button>
-                    <button type="button" class="btn btn-default">Ack</button>
-                    <button type="button" class="btn btn-default">Mail</button>
-                    <button type="button" class="btn btn-default">Call</button>
-</div></td>
+                            <tr style="background-color:#{{ server_status }}">
+                            <td> {{ server }} </td>
+                            <td>{{ service }}</td>
+                            <td>{{ service_duration }}</td>
+                            <td><div class="btn-group" role="group" aria-label="Power Buttons!!!">
+                                <button type="button" class="btn btn-default">Info</button>
+                                <button type="button" class="btn btn-default">Ack</button>
+                                <button type="button" class="btn btn-default">Mail</button>
+                                <button type="button" class="btn btn-default">Call</button>
+                                </div></td>
                   <td>{{ service_status_message }}</td>
-                </tr>
+                {% endfor %}
+               </tr>
 {% endfor %}
 
 
