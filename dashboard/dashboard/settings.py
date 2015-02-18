@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'nagios_alerts'
+    'nagios_alerts',
+    'polls',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -18,8 +18,9 @@
             <li><a href="#Hosts">All Hosts</a></li>
             <li><a href="https://redmine.hostcomm.ru">Redmine</a></li>
             <li><a href="https://msk.otrs.hostcomm.ru">OTRS</a></li>
-             <li><a href="https://wiki.corp.hostcomm.ru">Wiki</a></li>
+            <li><a href="https://wiki.corp.hostcomm.ru">Wiki</a></li>
             <li><a href="https://morkovka.lgg.ru">Морковка</a></li>
+            <li><a href="http://desktop.lgg.ru">Морковка 2.0</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -50,7 +51,8 @@
                     {% for service in service_name %}
 
                             <tr style="background-color:#{{ server_status }}">
-                            <td> {{ server }} </td>
+
+                            <td>{{ server }}</td>
                             <td>{{ service }}</td>
                             <td>{{ service_duration }}</td>
                             <td><div class="btn-group" role="group" aria-label="Power Buttons!!!">
