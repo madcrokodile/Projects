@@ -3,7 +3,7 @@ from django.db import models
 #from django.utils import timezone
 
 
-
+# https://nagios.corp.hostcomm.ru/nagios/cgi-bin/status.cgi?host=all&servicestatustypes=28&jsonoutput
 
 
 class Servers(models.Model):
